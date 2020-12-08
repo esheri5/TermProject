@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact Us</title>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable= yes">
+<link rel="stylesheet" href="tpstyle.css">
+<link rel="shortcut icon" type="image/x-icon" href="controller.ico">
+<!-- Javascript form validation -->
+
+</head>
+<body>
+<script type="text/javascript">
+	var firstname = document.forms["contactForm"]["fname"].value;
+	var lastname = document.forms["contactForm"]["lname"].value;
+	var number = document.forms["contactForm"]["userNumber"].value;
+	var email = document.forms["contactForm"]["userEmail"].value;
+	
+function validate(){
+	if (firstname == ""|| lastname == "" || number == "" || email == "") {
+		alert("Please leave no contact fields blank");
+		return false;
+ }
+ }
+</script>
+<div id="wrapper">
+	<header>
+	<h1>Leave us your feedback</h1>
+	</header>
+	
+	<!--Unordered list menu navigation -->	
+	<nav>
+	<ul id="navigation">
+	<li><a href="homepage.html" target="_blank" >Home</a> </li><br>
+	<li><a href="ratede.html" target="_blank">Rated E </a> </li><br>
+	<li><a href="ratede10.html" target="_blank">Rated E10+</a> </li><br>
+	<li><a href="ratedt.html" target="_blank">Rated T</a> </li><br>
+	<li><a href="ratedm.html" target="_blank">Rated M</a> </li><br>
+	<li><a href="rateda.html" target="_blank">Rated AO</a> </li><br>
+	<li><a href="ratinghistory.html" target="_blank">Rating History</a></li><br>
+	<li><a href="contact.html" target="_blank">Contact/<br>Feedback</a> </li><br>
+	</ul>
+	</nav>
+	
+	<main>
+	<h2> Contact Us</h2> 
+	<p> We are always looking to update our site the best way we can. In order
+	to give the best experience we would like to learn the best we can about our visitors.
+	We encourage you to fill out our short survey, leave your contact information, along with your feedback in the form
+	below. </p>
+	<form id="contactForm" action="http://webdevbasics.net/scripts/demo.php" onsubmit="return validate()"  method="post">
+	<fieldset>
+		<legend>Survey</legend>
+			<label for="havekids">Do you have kid(s)?</label><br>
+			<select name="kids" id="havekids">
+				<option value="yes">Yes</option>
+				<option value="no">No</option>
+			</select><br><br>
+			
+			What is your age group?<br>
+			<label for="under13"> Under 13 </label>
+			<input id="under13" name="age" type="radio" class="userselection">
+			<br>
+			<label for="13to17"> 13-17 </label>
+			<input id="13to17" name="age" type="radio" class="userselection">
+			<br>
+			<label for="18up"> 18+ </label>
+			<input id="18 up" name="age" type="radio" class="userselection">
+			<br><br>
+			
+			Which ESRB ratings are seen in your game collection? (Gamers)<br>
+			<label for="erating"> E for Everyone </label>
+			<input id="erating" name="gamerating" type="checkbox" class="userselection">
+			<br>
+			<label for="e10rating"> E10+ for everyone 10+ </label>
+			<input id="e10rating" name="gamerating" type="checkbox" class="userselection">
+			<br>
+			<label for="trating"> T for teen 13+</label>
+			<input id="trating" name="gamerating" type="checkbox" class="userselection">
+			<br>
+			<label for="mrating"> M for age 17+</label>
+			<input id="mrating" name="gamerating" type="checkbox" class="userselection">
+			<br>
+			<label for="aorating"> AO for Adults 18+ </label>
+			<input id="aorating" name="gamerating" type="checkbox" class="userselection">
+			<br>
+			</legend>
+			</fieldset>
+			<br>
+			
+		<fieldset>
+			<legend> Contact Information </legend>
+		<label for="firstName" >Enter Your First Name:</label>
+		<input id="firstName" name="fname" type="text" placeholder="John" class="usertext">
+		<br>
+		<label for="lastName" >Enter Your Last Name:</label>
+		<input id="lastName" name="lname" type="text" placeholder="Doe" class="usertext">
+		<br>
+		<label for="telNum" >Enter Your Phone Number:</label>
+		<input id="telNum" name="userNumber" type="text" placeholder="xxx.xxx.xxxx" class="usertext">
+		<br>
+		<label for="email" >Enter Your Email:</label>
+		<input id="email" name="userEmail" type="text" placeholder="john.doe@email.com" class="usertext">
+		<br>
+		
+		</fieldset>
+	
+		 <br>
+		
+		<fieldset>
+			<legend> Send us your feedback </legend>
+			<label for="subject"> Subject: </label>
+			<input id="subject" name="subject" type="text" cols="30" class="usertext"><br>
+			<label for="userComment"> Comment(s):</label>
+			<textarea id="userComment" name="comment" type="textarea" rows="10" cols="30" class="usertext">
+			</textarea>
+		</fieldset>
+	
+		<br>
+		<!-- submit and reset -->
+		
+		<button type="submit" class="btn" value="Submit"> Submit </button>
+		<br>
+		<button type="reset" class="btn" value="Reset"> Reset </button>
+		
+	</form>
+	
+	</main>
+	<footer>
+	Copyright &copy; 2020 Elijah Sheridan
+	</footer>
+	</div>
+</body>
+</html>
